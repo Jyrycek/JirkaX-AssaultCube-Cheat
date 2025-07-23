@@ -49,7 +49,7 @@ A modular AssaultCube cheat written in C# (.NET), featuring a login/register sys
 
 ---
 
-## 🔐 Authentication & Injection
+## Authentication & Injection
 
 The application includes a fully functional **Login/Register system** connected to a local database.  
 After successful authentication, the user is allowed to inject the cheat into the game.  
