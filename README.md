@@ -84,11 +84,14 @@ It was originally planned for remote control and real-time monitoring of modules
 
 ## Project Status & Known Issues
 
-This project is no longer actively developed and contains several bugs, unoptimized parts, and problematic sections.  
-Some features, such as the web interface, remain unfinished and commented out.  
-The codebase may have performance issues, especially with the WinForms overlay menu causing lag and rendering artifacts.  
-Due to the project's discontinued status, no further fixes or improvements are planned.
+This project is no longer actively developed and contains several bugs, unoptimized parts, and problematic sections.
+Some features, such as the web interface, remain unfinished and commented out.
+The codebase may have performance issues, especially with the WinForms overlay menu causing lag and rendering artifacts.
 
+Additionally, the project uses outdated or suboptimal technologies, primarily relying on WinForms for the overlay UI, which is not ideal for smooth, low-latency in-game rendering.
+Modern cheats and game overlays typically use more suitable technologies such as OpenGL, DirectX hooks, or other graphics APIs for better performance and stability.
+
+Due to the project's discontinued status, no further fixes or improvements are planned.
 
 ## Legal Notice
 
