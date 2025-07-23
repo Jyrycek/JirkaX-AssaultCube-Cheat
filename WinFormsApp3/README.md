@@ -90,7 +90,7 @@ The codebase may have performance issues, especially with the WinForms overlay m
 Due to the project's discontinued status, no further fixes or improvements are planned.
 
 
-## 📎 Legal Notice
+## Legal Notice
 
 This software interacts directly with game memory and violates game terms of service. It is provided for **educational purposes only**. Use at your own risk.
 
