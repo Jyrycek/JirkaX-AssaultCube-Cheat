@@ -28,7 +28,7 @@ A modular AssaultCube cheat written in C# (.NET), featuring a login/register sys
 - Infinite Ammo / Health / Armor / Grenades
 - TeamChanger
 
-### 👁Visual
+### Visual
 - ESP
 - WireFrame
 - Nametags
