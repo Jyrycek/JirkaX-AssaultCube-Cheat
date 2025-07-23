@@ -39,7 +39,7 @@ A modular AssaultCube cheat written in C# (.NET), featuring a login/register sys
 
 Here's a preview of the fully injected in-game cheat menu:
 
-![In-Game Menu](https://i.postimg.cc/KvVnTgQN/image.png)
+![In-Game Menu](preview.png)
 
 ---
 
