@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ovládání aplikace</title>
+    <!-- Pøidání Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Vlastní styly */
+        .navbar {
+            background-color: #f8f9fa; /* Zmìna barvy navigaèního panelu */
+        }
+
+        .navbar-brand {
+            color: #343a40; /* Zmìna barvy textu navigaèního loga */
+            font-weight: bold;
+        }
+
+        .nav-link {
+            color: #303a45; /* Zmìna barvy textu navigaèních položek */
+        }
+
+            .nav-link.active {
+                background-color: transparent /* Odstranìní modrého pozadí aktivní navigaèní položky */
+            }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold mx-3 px-4" href="#v-pills-home-tab" data-toggle="pill">JirkaX</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-1 bg-light" style="min-height: 94vh;">
+                <div class="nav flex-column nav-pills mt-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <a class="nav-link active " id="v-pills-home-tab" data-bs-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Home</a>
+                    <a class="nav-link" id="v-pills-assaultcube-tab" data-bs-toggle="pill" href="#v-pills-assaultcube" role="tab" aria-controls="v-pills-assaultcube" aria-selected="false">AssaultCube</a>
+                    <a class="nav-link" id="v-pills-farcry-tab" data-bs-toggle="pill" href="#v-pills-farcry" role="tab" aria-controls="v-pills-farcry" aria-selected="false">FarCry 6</a>
+                </div>
+            </div>
+            <div class="col-9">
+                <div class="tab-content" id="v-pills-tabContent">
+                    <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                        <div class="row mt-5">
+                            <div class="col-4 text-center"></div>
+                            <div class="col-4 text-center"><h3 class="mt-4 m-5" id="welcome-text">Welcome</h3></div>
+                            <div class="col-4 text-center"></div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-assaultcube" role="tabpanel" aria-labelledby="v-pills-assaultcube-tab">
+                        <div class="row mt-4">
+                            <div class="col-4"></div>
+                            <div class="col-4 text-center"><h3>AssaultCube settings</h3></div>
+                            <div class="col-4"></div>
+                        </div>
+                        <div class="row mt-5">
+                            <div class="col-4 text-center"><h4>STATUS</h4></div>
+                            <div class="col-4 text-center"><h4>NAME</h4></div>
+                            <div class="col-4 text-center"><h4>STATUS</h4></div>
+                        </div>
+                        <div class="row mt-4">
+                            <div class="col-4 text-center fw-bold h5 d-flex align-items-center justify-content-center">Menu</div>
+                            <div class="col-4 text-center">
+                                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                    <label class="btn btn-success active" id="activateBtn">
+                                        <input type="radio" name="options" id="option1" autocomplete="off" checked> Activated
+                                    </label>
+                                    <label class="btn btn-danger" id="deactivateBtn">
+                                        <input type="radio" name="options" id="option2" autocomplete="off"> Deactivated
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-4 text-center d-flex align-items-center justify-content-center">Not Active</div>
+                        </div>
+                        <div class="row mt-4 text-center">
+                            <div class="col-4 text-center fw-bold h5 d-flex align-items-center justify-content-center">Player Menu</div>
+                            <div class="col-4">
+                                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                    <label class="btn btn-success active" id="xd">
+                                        <input type="radio" name="options" id="optio1" autocomplete="off" checked> Activated
+                                    </label>
+                                    <label class="btn btn-danger" id="xdd">
+                                        <input type="radio" name="options" id="optio22" autocomplete="off"> Deactivated
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-4 text-center d-flex align-items-center justify-content-center">Not Active</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Pøidání Bootstrap JS (Pokud potøebujete) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Pøidání jQuery (Pokud potøebujete pro AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Skript pro získání textu z Python aplikace -->
+    <script>
+    // Naètení textu z Python aplikace pomocí AJAX
+    $(document).ready(function() {
+        $.get("http://localhost:5000/get_text", function(data) {
+            // Zobrazení naèteného textu vedle nadpisu "Welcome"
+            $("#welcome-text").text(data);
+        });
+    });
+    </script>
+
+</body>
+</html>

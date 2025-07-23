@@ -1,0 +1,40 @@
+{
+  "AppName": "JirkaX",
+  "Categories": {
+    "Combat": {
+      "Aimbot": false,
+      "FastGrenades": true,
+      "FastReaload": true
+    },
+    "Movement": {
+      "AutoJump": false,
+      "Fly": false
+    },
+    "Misc": {
+      "InfiniteAmmo": {
+        "Enabled": true,
+        "Value": 999
+      },
+      "InfiniteHealth": {
+        "Enabled": true,
+        "Value": 999
+      },
+      "InfiniteArmor": {
+        "Enabled": true,
+        "Value": 100
+      },
+      "InfiniteGrenades": {
+        "Enabled": true,
+        "Value": 999
+      },
+      "TeamChanger": {
+        "Enabled": false
+      }
+    },
+    "Visual": {
+      "Esp": false,
+      "WireFrame": false,
+      "Nametags": false
+    }
+  }
+}
